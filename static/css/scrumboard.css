@@ -62,3 +62,22 @@ ul {
     resize: vertical;
 }
 
+.logout {
+    float: right;
+}
+
+#project-name {
+    color: #404040;
+    font-family: sans-serif;
+    margin-left: 21px;
+}
+
+.list-sort {
+    color: white;
+    margin: 0px 7px 0px 7px;
+}
+
+.close-delete-inputs {
+    float: right;
+}
+
