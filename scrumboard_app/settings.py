@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'scrumboard',
     'rest_framework',
+    'auth_api',
 
     'django.contrib.admin',
     'django.contrib.auth',
