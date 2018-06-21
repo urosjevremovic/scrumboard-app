@@ -1,0 +1,29 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <body ng-app="scrumboard.demo">
+        {% verbatim %}
+            <div ng-controller="ScrumboardController">
+                <div ng-repeat="list in data">
+                    <h3>{{ list.name }}</h3>
+                    <ul>
+                        <li ng-repeat="card in list.cards">
+                            <scrumboard-card></scrumboard-card>
+                        </li>
+                    </ul>
+                    <input type="text" ng-model="new_title">{{ new_title }}
+                    <button ng-click="add(list, new_title)">+</button>
+                </div>
+            </div>
+        {% endverbatim %}
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+        <script src="{% static 'scrumboard/scrumboard.js' %}"></script>
+        <script src="{% static 'scrumboard/card_directive.js' %}"></script>
+    </body>
+</html>

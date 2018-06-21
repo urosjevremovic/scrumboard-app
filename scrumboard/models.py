@@ -9,7 +9,7 @@ class List(models.Model):
 
 
 class Card(models.Model):
-    title = models.CharField(max_length=30)
+    title = models.CharField(max_length=50)
     description = models.TextField(blank=True)
     list = models.ForeignKey(List, related_name='cards', on_delete=models.CASCADE)
     story_points = models.PositiveIntegerField(null=True, blank=True)
